@@ -11,8 +11,9 @@ const logs = require("./api/logs");
 
 const app = express();
 
+// app.enable("trust proxy"); // needed for rate limiting by Client IP
+
 mongoose.connect(process.env.DATABASE_URL, {
-  useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -28,7 +29,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Hello world!"
+    message: "Hello World!"
   });
 });
 
