@@ -8,6 +8,10 @@ body {
     overflow: hidden;
 }
 
+.error {
+  color: #ff0000;
+}
+
 .marker {
   transform: translate(-50%, -100%);
 }
@@ -21,6 +25,52 @@ body {
 }
 
 .popup {
-  max-width: 300px;
+  width: 40vw;
+  padding: 1rem;
 }
 
+.popup .left {
+  float: left;
+}
+
+.popup .right {
+  float: right;
+}
+
+.popup img {
+  height: 200px;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+  float: right;
+}
+
+.popup::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.entry-form label, 
+.entry-form input,
+.entry-form textarea,
+.entry-form button{
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
+}
+
+.entry-form button {
+  text-align: center;
+  border: none;
+  color: white;
+  background: #237fbc;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.entry-form button:hover {
+  background: #1116fc;
+  font-size: 1.1rem;
+}
